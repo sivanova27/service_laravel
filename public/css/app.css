@@ -6233,6 +6233,9 @@ label,
 }
 
 #search_form legend{cursor:pointer; margin-left:8px}
+#search_form .form-label{width:100%;}
 .clickable-row{cursor:pointer}
-
+.paddingTop48{padding-top:48px}
 .unstyled{list-style: none}
+.btnsgroup .btn-group, .btnsgroup .multiselect, .btnsgroup .multiselect-container{width:100%}
+.btnsgroup .btn-week-days{padding:6px 66px;}
