@@ -104,7 +104,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-4 content paddingTop48">	
+	<div class="col-md-4 content paddingTop82">	
 		<div class="form-group">
 			<div class="col-xs-6">
 				{!! Form::label('annual_from','Annual start',['class'=>'form-label']) !!}
