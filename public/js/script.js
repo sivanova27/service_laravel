@@ -67,20 +67,6 @@ $(document).ready(function() {
 			});
 			
 			$('.search_case').click(function(){
-				path = window.location.pathname.split('/').slice(0,3).join('/');
-				var reviews = $('input.cases:checked[type="checkbox"]').toArray().map(function(key,value){
-					return key.value;
-				});
-				var request = {};
-				$('input.cases[type="text"]').toArray().map(function(value,key){
-					return request[$(value).attr('name')] = $(value).val();
-				});
-				request.reviews = reviews;
-				request.employee_id = employee_id;
-				request._token = Globals._token;
-				$.post(path+'/again',request).done(function(data){
-					$(".result").html(data);
-				});
 				
 			});
 			
@@ -88,7 +74,8 @@ $(document).ready(function() {
 			     window.document.location = window.document.location.href.replace('search','')+'profile/'+$(this).attr('id');
 			 });
 			 
-			 var ctx = document.getElementById("myChart").getContext("2d");
+			if(document.getElementById("myChart")){
+			var ctx = document.getElementById("myChart").getContext("2d");
 			var data = {
 			    labels: chart_labels,
 			    datasets: [
@@ -105,6 +92,8 @@ $(document).ready(function() {
 			    ]
 			};
 			var myLineChart = new Chart(ctx).Line(data, '');
+			}
+			
 			
 			
 			

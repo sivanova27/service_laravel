@@ -1,16 +1,17 @@
 @extends('app')
 
 @section('content')
+<div class="">
 <h1>Search Professionals</h1>
 	{!! Form::open(array('url'=>'/search','method'=>'POST','id'=>'search_form')) !!}
 
-<div class="row">
+
 	<fieldset>
 	<legend>Search by some personal info</legend>
 	<div class="content">
 	<div class="col-md-4">
 		<div class="form-group">
-			{!! Form::label('company_id','Contractor',['class'=>'l-large']) !!}
+			{!! Form::label('company_id','Contractor',['class'=>'']) !!}
 			{!! Form::select('company_id[]',$companies, Input::get('company_id'),['multiple'=>'multiple','class'=>'selectpicker']) !!}
 		</div>
 		<div class="form-group">
